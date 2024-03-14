@@ -16,7 +16,7 @@ int findMax(int arr[], int size) {
       maxArr = arr[i];
     }
   }
-  return 0;
+  return maxArr;
 }
 
 /*
