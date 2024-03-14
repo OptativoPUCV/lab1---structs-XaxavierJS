@@ -48,93 +48,91 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
       arrayPares[j] = arr[i];
       j++;
     }
-
-    return NULL;
   }
+  return NULL;
+}
 
-  /*
-  Ejercicio 4: Fusión de dos Arreglos Ordenados
-  Descripción: Escribe una función que tome dos arreglos
-  ordenados y sus tamaños, y luego fusione estos dos
-  arreglos en un tercer arreglo también ordenado.
-  */
-  void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                         int result[]) {
-    int sizeResultado = size1 + size2;
-    int contador1 = 0;
-    int contador2 = 0;
-    for (int i = 0; i < sizeResultado; i++) {
-      if (contador1 < size1 &&
-          (contador2 >= size2 || arr1[contador1] < arr2[contador2])) {
-        result[i] = arr1[contador1];
-        contador1++;
-      } else {
-        result[i] = arr2[contador2];
-        contador2++;
-      }
+/*
+Ejercicio 4: Fusión de dos Arreglos Ordenados
+Descripción: Escribe una función que tome dos arreglos
+ordenados y sus tamaños, y luego fusione estos dos
+arreglos en un tercer arreglo también ordenado.
+*/
+void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
+                       int result[]) {
+  int sizeResultado = size1 + size2;
+  int contador1 = 0;
+  int contador2 = 0;
+  for (int i = 0; i < sizeResultado; i++) {
+    if (contador1 < size1 &&
+        (contador2 >= size2 || arr1[contador1] < arr2[contador2])) {
+      result[i] = arr1[contador1];
+      contador1++;
+    } else {
+      result[i] = arr2[contador2];
+      contador2++;
     }
   }
+}
 
-  /*
-  Ejercicio 5: Comprobación de Ordenación
-  Descripción: Escribe una función que tome un arreglo y su tamaño,
-  y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
-    0 si no está ordenado, y -1 si está ordenado en orden descendente.
-  */
-  int verificarOrden(int vector[], int talla) {
-    int contadorASC = 1;
-    int contadorDESC = 1;
+/*
+Ejercicio 5: Comprobación de Ordenación
+Descripción: Escribe una función que tome un arreglo y su tamaño,
+y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
+  0 si no está ordenado, y -1 si está ordenado en orden descendente.
+*/
+int verificarOrden(int vector[], int talla) {
+  int contadorASC = 1;
+  int contadorDESC = 1;
 
-    for (int i = 0; i < talla; i++) {
-      if (vector[i] < vector[i + 1]){
-        contador++;
-      }
-      else if (vector[i] > vector[i + 1]){
-        contadorDESC++;
-      }
-
+  for (int i = 0; i < talla; i++) {
+    if (vector[i] < vector[i + 1]) {
+      contadorASC++;
+    } else if (vector[i] > vector[i + 1]) {
+      contadorDESC++;
     }
-    if (contadorASC == talla) return 1;
-    return -1;
   }
+  if (contadorASC == talla)
+    return 1;
+  return -1;
+}
 
-  /*
-  Ejercicio 6: Información de una Biblioteca
-  Descripción: Vamos a representar la información de una biblioteca. En la
-  biblioteca, hay libros, y cada libro tiene un autor. Queremos organizar esta
-  información utilizando estructuras anidadas en C. Escribe la función para
-  inicializar la información de un libro.
+/*
+Ejercicio 6: Información de una Biblioteca
+Descripción: Vamos a representar la información de una biblioteca. En la
+biblioteca, hay libros, y cada libro tiene un autor. Queremos organizar esta
+información utilizando estructuras anidadas en C. Escribe la función para
+inicializar la información de un libro.
+*/
+
+typedef struct {
+  char nombre[50];
+  int anioNacimiento;
+} Autor;
+
+typedef struct {
+  char titulo[100];
+  Autor autor;
+  int anioPublicacion;
+} Libro;
+
+void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
+                      int anioNacimiento, int anioPublicacion) {}
+
+/*
+Ejercicio 7: Lista enlazada de números
+Descripción: Escribe una función que tome un arreglo de enteros y su tamaño, y
+luego cree una lista enlazada usando la estructura Nodo. Cada nodo de la lista
+debe contener un número del arreglo, y los nodos deben estar enlazados en el
+mismo orden que los números aparecen en el arreglo. El último nodo de la lista
+debe apuntar a NULL. La función debe devolver un puntero al primer nodo de la
+lista enlazada.
+Recuerda reservar memoria dinámica para cada nodo usando malloc.
   */
 
-  typedef struct {
-    char nombre[50];
-    int anioNacimiento;
-  } Autor;
+typedef struct nodo {
+  int numero;
+  struct nodo *siguiente; // puntero al siguiente nodo
+} Nodo;
 
-  typedef struct {
-    char titulo[100];
-    Autor autor;
-    int anioPublicacion;
-  } Libro;
-
-  void inicializarLibro(Libro * libro, const char *titulo,
-                        const char *nombreAutor, int anioNacimiento,
-                        int anioPublicacion) {}
-
-  /*
-  Ejercicio 7: Lista enlazada de números
-  Descripción: Escribe una función que tome un arreglo de enteros y su tamaño, y
-  luego cree una lista enlazada usando la estructura Nodo. Cada nodo de la lista
-  debe contener un número del arreglo, y los nodos deben estar enlazados en el
-  mismo orden que los números aparecen en el arreglo. El último nodo de la lista
-  debe apuntar a NULL. La función debe devolver un puntero al primer nodo de la
-  lista enlazada.
-  Recuerda reservar memoria dinámica para cada nodo usando malloc.
-    */
-
-  typedef struct nodo {
-    int numero;
-    struct nodo *siguiente; // puntero al siguiente nodo
-  } Nodo;
-
-  Nodo *crearListaEnlazada(int arr[], int size) { return NULL; }
+Nodo *crearListaEnlazada(int arr[], int size) { return NULL; }
