@@ -238,3 +238,17 @@ Thu 14 Mar 2024 08:55:35 PM UTC:
  tests:  0|1
 total_score: 60/70
 83f0c46
+Thu 14 Mar 2024 09:11:23 PM UTC: 
+ exercises.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:150:9: error: unused variable ‘ultimo’ [-Werror=unused-variable]
+  150 |   Nodo *ultimo = NULL;
+      |         ^~~~~~
+exercises.c:149:9: error: unused variable ‘lista’ [-Werror=unused-variable]
+  149 |   Nodo *lista = NULL;
+      |         ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0ec5597
