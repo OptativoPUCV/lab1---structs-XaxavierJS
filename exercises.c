@@ -87,9 +87,9 @@ int checkSorted(int vector[], int talla) {
   int contadorDESC = 1;
 
   for (int i = 0; i < talla; i++) {
-    if (vector[i] < vector[i + 1]) {
+    if (vector[i] <= vector[i + 1]) {
       contadorASC++;
-    } else if (vector[i] > vector[i + 1]) {
+    } else if (vector[i] >= vector[i + 1]) {
       contadorDESC++;
     }
     if (contadorASC != talla) return 0;
