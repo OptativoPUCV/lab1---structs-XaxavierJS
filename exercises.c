@@ -45,7 +45,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
   if (arrayPares == NULL) exit(EXIT_FAILURE);
   
   int j = 0;
-  for (int i = 0; i < *newSize; i++) {
+  for (int i = 0; i < (*newSize); i++) {
     
     if (arr[i] % 2 == 0) {
       arrayPares[j] = arr[i];
