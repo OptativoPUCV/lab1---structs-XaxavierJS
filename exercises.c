@@ -40,8 +40,8 @@ Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
-int *filterEvenNumbers(int arr[], int size, int *newSize) {
-  int *arrayPares = (int *)malloc(*newSize * sizeof(int));
+int *filterEvenNumbers(int arr[], int size, int newSize) {
+  int *arrayPares = (int *)malloc(newSize * sizeof(int));
   if (arrayPares == NULL) exit(EXIT_FAILURE);
   
   int j = 0;
