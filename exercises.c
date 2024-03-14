@@ -92,10 +92,11 @@ int checkSorted(int vector[], int talla) {
     } else if (vector[i] > vector[i + 1]) {
       contadorDESC++;
     }
+    if (contadorASC != talla) return 0;
   }
-  if (contadorASC == talla)
-    return 1;
-  return -1;
+
+  if (contadorDESC == talla) return -1;
+  return 1;
 }
 
 /*
