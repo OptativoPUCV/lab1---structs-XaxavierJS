@@ -85,19 +85,19 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 */
 int checkSorted(int arreglo[], int tamano) {
 
-  int asc = 0;
-  int desc = 0;
+  int asc = 1;
+  int desc = 1;
 
   for (int i = 0; i < tamano - 1; i++) {
     if (arreglo[i] < arreglo[i + 1]) {
-      asc++;
+      asc = 0;
     } else if (arreglo[i] > arreglo[i + 1]) {
-      desc++;
+      desc = 0;
     }
   }
-  if (asc == tamano - 1)
+  if (asc)
     return 1;
-  if (desc == tamano - 1)
+  if (desc)
     return -1;
   return 0;
 }
