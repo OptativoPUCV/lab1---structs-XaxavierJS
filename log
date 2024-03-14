@@ -214,3 +214,9 @@ test.c:258:18: error: implicit declaration of function ‘checkSorted’; did yo
 cc1: all warnings being treated as errors
 Compilation failed
 668c7a3
+Thu 14 Mar 2024 08:47:31 PM UTC: 
+ exercises.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+ tests:  0|3
+total_score: 40/70
+bc0126f
