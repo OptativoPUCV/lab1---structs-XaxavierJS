@@ -42,7 +42,8 @@ los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) {
   int *arrayPares = (int *)malloc(size * sizeof(int));
-  if (arrayPares == NULL) exit(EXIT_FAILURE);
+  if (arrayPares == NULL)
+    exit(EXIT_FAILURE);
   (*newSize) = 0;
   for (int i = 0; i < size; i++) {
     if (arr[i] % 2 == 0) {
@@ -82,21 +83,21 @@ Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
-int checkSorted(int vector[], int talla) {
-  int contadorASC = 1;
-  int contadorDESC = 1;
+int verificarOrden(int arreglo[], int tamano) {
 
-  for (int i = 0; i < talla; i++) {
-    if (vector[i] <= vector[i + 1]) {
-      contadorASC++;
-    } else if (vector[i] >= vector[i + 1]) {
-      contadorDESC++;
+  int asc = 0;
+  int desc = 0;
+
+  for (int i = 0; i < tamano - 1; i++) {
+    if (arreglo[i] < arreglo[i + 1]) {
+      asc++;
+    } else if (arreglo[i] > arreglo[i + 1]) {
+      desc++;
     }
-    if (contadorASC != talla) return 0;
   }
-
-  if (contadorDESC == talla) return -1;
-  return 1;
+  if (asc == tamano - 1) return 1;
+  if (desc == tamano - 1) return -1;
+  return 0;
 }
 
 /*

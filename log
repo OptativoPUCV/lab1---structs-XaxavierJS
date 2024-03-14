@@ -203,3 +203,14 @@ Thu 14 Mar 2024 08:39:41 PM UTC:
  tests:  0|3
 total_score: 40/70
 92ab342
+Thu 14 Mar 2024 08:47:15 PM UTC: 
+ exercises.c | 27 ++++++++++++++-------------
+ 1 file changed, 14 insertions(+), 13 deletions(-)
+test.c: In function ‘test_checkSorted’:
+test.c:258:18: error: implicit declaration of function ‘checkSorted’; did you mean ‘test_checkSorted’? [-Werror=implicit-function-declaration]
+  258 |     int result = checkSorted(arr, size);
+      |                  ^~~~~~~~~~~
+      |                  test_checkSorted
+cc1: all warnings being treated as errors
+Compilation failed
+668c7a3
