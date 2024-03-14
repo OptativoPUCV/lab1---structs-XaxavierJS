@@ -96,9 +96,9 @@ int checkSorted(int arreglo[], int tamano) {
     }
   }
   if (asc)
-    return 1;
-  if (desc)
     return -1;
+  if (desc)
+    return 1;
   return 0;
 }
 
