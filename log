@@ -252,3 +252,9 @@ exercises.c:149:9: error: unused variable ‘lista’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 0ec5597
+Thu 14 Mar 2024 09:11:33 PM UTC: 
+ exercises.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  0|1
+total_score: 60/70
+08a61e1

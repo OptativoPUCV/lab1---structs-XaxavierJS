@@ -146,8 +146,7 @@ typedef struct nodo {
 } Nodo;
 
 Nodo *crearListaEnlazada(int arr[], int size) {
-  Nodo *lista = NULL;
-  Nodo *ultimo = NULL;
+ 
 
   for (int i = 0; i < size - 1; i++) {
     Nodo *nuevoNodo = (Nodo *)malloc(sizeof(Nodo));
