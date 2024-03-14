@@ -28,3 +28,43 @@ test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-func
 cc1: all warnings being treated as errors
 Compilation failed
 95ace9b
+Thu 14 Mar 2024 08:15:33 PM UTC: 
+ exercises.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+In file included from test.c:1:
+exercises.c: In function ‘verificarOrden’:
+exercises.c:90:9: error: ‘contador’ undeclared (first use in this function); did you mean ‘contadorASC’?
+   90 |         contador++;
+      |         ^~~~~~~~
+      |         contadorASC
+exercises.c:90:9: note: each undeclared identifier is reported only once for each function it appears in
+test.c: In function ‘test_checkSorted’:
+test.c:258:18: error: implicit declaration of function ‘checkSorted’; did you mean ‘test_checkSorted’? [-Werror=implicit-function-declaration]
+  258 |     int result = checkSorted(arr, size);
+      |                  ^~~~~~~~~~~
+      |                  test_checkSorted
+test.c: In function ‘filterEvenNumbers’:
+test.c:382:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:410:1: error: expected declaration or statement at end of input
+  410 | }
+      | ^
+test.c:7:6: error: unused variable ‘msg’ [-Werror=unused-variable]
+    7 | char msg[300];
+      |      ^~~
+test.c:411: error: control reaches end of non-void function [-Werror=return-type]
+At top level:
+test.c:382:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-function]
+   47 | void readIntArray(int arr[], int *size) {
+      |      ^~~~~~~~~~~~
+In file included from test.c:1:
+exercises.c:84:7: error: ‘verificarOrden’ defined but not used [-Werror=unused-function]
+   84 |   int verificarOrden(int vector[], int talla) {
+      |       ^~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d9b899f

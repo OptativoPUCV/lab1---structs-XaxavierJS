@@ -81,7 +81,22 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
   y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
     0 si no está ordenado, y -1 si está ordenado en orden descendente.
   */
+  int verificarOrden(int vector[], int talla) {
+    int contadorASC = 1;
+    int contadorDESC = 1;
 
+    for (int i = 0; i < talla; i++) {
+      if (vector[i] < vector[i + 1]){
+        contador++;
+      }
+      else if (vector[i] > vector[i + 1]){
+        contadorDESC++;
+      }
+
+    }
+    if (contadorASC == talla) return 1;
+    return -1;
+  }
 
   /*
   Ejercicio 6: Información de una Biblioteca
