@@ -264,3 +264,17 @@ Thu 14 Mar 2024 09:18:02 PM UTC:
  tests:  0|1
 total_score: 60/70
 1e742e6
+Sat 16 Mar 2024 12:58:38 AM UTC: 
+ exercises.c | 23 ++++++++++++++---------
+ 1 file changed, 14 insertions(+), 9 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:154:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  154 |     if (nuevoNodo == NULL)
+      |     ^~
+exercises.c:157:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  157 |       actual->numero = arr[i];
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c43d300
