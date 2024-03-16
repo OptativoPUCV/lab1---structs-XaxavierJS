@@ -283,3 +283,9 @@ Sat 16 Mar 2024 12:59:16 AM UTC:
  1 file changed, 3 insertions(+), 3 deletions(-)
  tests:  0|0
 4c5fafa
+Sat 16 Mar 2024 01:00:30 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  0|1
+total_score: 60/70
+97c6962
